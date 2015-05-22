@@ -1,4 +1,4 @@
-The Cacatus Info Slider is a WordPress plugin.  As opposed to the many sliders that exist whose main purpose is to showcase photos, Info Slider's main purpose is to showcase information.  Its best use is for anyone looking to display a step-by-step process with both text and a visual aid.
+The Cactus Info Slider is a WordPress plugin.  As opposed to the many sliders that exist whose main purpose is to showcase photos, Info Slider's main purpose is to showcase information.  Its best use is for anyone looking to display a step-by-step process with both text and a visual aid.
 
 How to Use:
 Info Slider uses simple shortcodes to construct a set of slides.
