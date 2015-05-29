@@ -2,25 +2,25 @@
 /**
 * Plugin Name: Cactus Info Slider
 * Plugin URI: http://happycactusdev.com/info-slider
-* Description: Info Slider is for users who want a step-by-step set of slides to explain a process.  Each slide contains text (on the left) and an image (on the right).  Sliding functionality is from the Unslider.js library.
+* Description: A very simple slider devoted to displaying sequential information.  Explanatory text on left, image on right.
 * Version: 1.0
 * Author: Happy Cactus Dev
 * Author URI: http://happycactusdev.com
 * License: GPL2
 */
 
-add_action('wp_enqueue_scripts', 'register_externals');
-add_shortcode('cactus-slider', 'slider_setup');
-add_shortcode('slider-item', 'add_slider_item');
+add_action('wp_enqueue_scripts', 'cacslide_register_externals');
+add_shortcode('cactus-slider', 'cacslide_slider_setup');
+add_shortcode('slider-item', 'cacslide_add_slider_item');
 
 // Adds CSS & JS to plugin
-function register_externals() {
+function cacslide_register_externals() {
 	wp_enqueue_style('info-slider', plugins_url( 'css/info-slider.css', __FILE__));
 	wp_enqueue_script('unslider', plugins_url( 'js/unslider.min.js', __FILE__), array( 'jquery' ));
 	wp_enqueue_script('infoslider', plugins_url( 'js/infoslider.js', __FILE__));
 }
 
-function slider_setup($atts, $content=null) {
+function cacslide_slider_setup($atts, $content=null) {
 	$output = do_shortcode($content);
 	return '<div class="slider-container"><ul>'.$output.'</ul></div>
 			<br><br>
@@ -29,7 +29,7 @@ function slider_setup($atts, $content=null) {
 }
 
 // Creates single slide
-function add_slider_item($atts, $content=null) {
+function cacslide_add_slider_item($atts, $content=null) {
 	extract(
 		shortcode_atts( 
 			array(
