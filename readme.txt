@@ -1,4 +1,4 @@
-Cactus Info Slider
+=== Cactus Info Slider ===
 Contributors: thehappycactus
 Tags: slider
 Requires at least: 3.0.1
